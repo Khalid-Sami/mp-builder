@@ -1,15 +1,25 @@
-import VueGoodTable from './components/Table.vue';
+import BBuilder from './common/builder/BBuilder.vue';
+import BTabBuilder from './common/builder/tabs/BTabBuilder.vue';
+import BTable from './common/table/BTable.vue';
 
-const VueGoodTablePlugin = {
+const BBuilderPlugin = {
     install(Vue, options) {
-        Vue.component(VueGoodTable.name, VueGoodTable);
+        Vue.component(BBuilder.name, BBuilder);
+        Vue.component(BTabBuilder.name, BTabBuilder);
+        Vue.component(BTable.name, BTable);
     },
 };
 
 // Automatic installation if Vue has been added to the global scope.
 if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(VueGoodTablePlugin);
+    window.Vue.use(BBuilderPlugin);
+    window.mp = require('./mixins')
 }
 
-export default VueGoodTablePlugin;
-export { VueGoodTable };
+/**
+ * register plugins
+ */
+require('./plugins')
+
+export default BBuilderPlugin;
+export { BBuilder, BTabBuilder, BTable };

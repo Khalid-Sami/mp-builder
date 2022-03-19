@@ -1,12 +1,23 @@
 {
-  "name": "red-code-js",
+  "name": "red-code-builder",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
     "test": "test"
   },
-  "author": "Red Code",
+  "authors":[
+    {
+      "name": "Amr Saidam",
+      "email": "amr.saidam.94@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Khalid Sabbah",
+      "email": "khalidsami.se@gmail.com",
+      "role": "Developer"
+    }
+  ],
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.6.0",
